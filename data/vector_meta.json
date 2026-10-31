@@ -1,0 +1,33 @@
+{
+  "model_name": "jinaai/jina-embeddings-v3",
+  "normalize_embeddings": 1,
+  "truncate_dim": 768,
+  "use_e5_prefix": 0,
+  "tasks": {
+    "mashup_task": "retrieval.query",
+    "api_task": "retrieval.passage",
+    "tag_task": "retrieval.passage"
+  },
+  "weights": {
+    "api": {
+      "title": 0.6,
+      "desc": 1.0,
+      "tags": 0.8,
+      "url": 0.1
+    },
+    "mashup": {
+      "title": 0.6,
+      "desc": 1.0,
+      "cats": 0.8,
+      "url": 0.1
+    }
+  },
+  "cleanup": {
+    "strip_urls": 1,
+    "strip_html": 1
+  },
+  "tag_mapping": {
+    "use_existing": 1,
+    "fold": "fold_1"
+  }
+}
